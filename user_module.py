@@ -4,20 +4,22 @@
 # ID, имя и уровень доступа ('user' для обычных сотрудников).
 #
 
-class User():
+class User:
 
-    list_of_users = []
-    def __init__(self, id, name, is_user=True):
+    def __init__(self, id, name, is_user):
         self.__id = id
-        self.name = name
-        self.is_user = is_user
+        self.__name = name
+        self.__is_user = is_user
 
     def get_id(self):
-        return self.id
+        return self.__id
+
+    def get_name(self):
+        return self.__name
 
     def set_id(self, value):
-        self.id = value
+        self.__id = value
 
     def get_is_user(self):
-        return self.get_is_user
+        return self.__is_user
 
